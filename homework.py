@@ -1,19 +1,28 @@
-from typing import Dict, ClassVar, Type
-from dataclasses import dataclass, field
+from typing import List, Dict, ClassVar, Type, Tuple, Union
+from dataclasses import dataclass
 
 
-@dataclass
 class InfoMessage:
     """Информационное сообщение о тренировке."""
-
-    training_type: str
     duration: float
     distance: float
     speed: float
     calories: float
-    mess: str = field(init=False)
+    training_type: str
 
-    def __post_init__(self):
+    def __init__(self,
+                 training_type: str,
+                 duration: float,
+                 distance: float,
+                 speed: float,
+                 calories: float,
+                 ) -> None:
+
+        self.training_type = training_type
+        self.duration = duration
+        self.distance = distance
+        self.speed = speed
+        self.calories = calories
         self.mess = (f'Тип тренировки: {self.training_type}; '
                      f'Длительность: {self.duration:.3f} ч.; '
                      f'Дистанция: {self.distance:.3f} км; '
@@ -119,12 +128,11 @@ def main(training: Training) -> None:
 
 
 if __name__ == '__main__':
-    packages = [
+    packages: List[Tuple[str, List[Union[int, float]]]] = [
         ('SWM', [720, 1, 80, 25, 40]),
         ('RUN', [15000, 1, 75]),
         ('WLK', [9000, 1, 75, 180]),
     ]
 
     for workout_type, data in packages:
-        training = read_package(workout_type, data)
-        main(training)
+        main(read_package(workout_type, data))
