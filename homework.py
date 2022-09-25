@@ -2,34 +2,24 @@ from typing import List, Dict, ClassVar, Type, Tuple, Union
 from dataclasses import dataclass
 
 
+@dataclass
 class InfoMessage:
     """Информационное сообщение о тренировке."""
+
+    mess: ClassVar[str]
+
+    training_type: str
     duration: float
     distance: float
     speed: float
     calories: float
-    training_type: str
 
-    def __init__(self,
-                 training_type: str,
-                 duration: float,
-                 distance: float,
-                 speed: float,
-                 calories: float,
-                 ) -> None:
-
-        self.training_type = training_type
-        self.duration = duration
-        self.distance = distance
-        self.speed = speed
-        self.calories = calories
+    def get_message(self) -> str:
         self.mess = (f'Тип тренировки: {self.training_type}; '
                      f'Длительность: {self.duration:.3f} ч.; '
                      f'Дистанция: {self.distance:.3f} км; '
                      f'Ср. скорость: {self.speed:.3f} км/ч; '
                      f'Потрачено ккал: {self.calories:.3f}.')
-
-    def get_message(self) -> str:
         return (self.mess)
 
 
