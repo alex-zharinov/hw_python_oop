@@ -6,13 +6,12 @@ from dataclasses import dataclass
 class InfoMessage:
     """Информационное сообщение о тренировке."""
 
-    mess: ClassVar[str]
-
     training_type: str
     duration: float
     distance: float
     speed: float
     calories: float
+    mess: str = ''
 
     def get_message(self) -> str:
         self.mess = (f'Тип тренировки: {self.training_type}; '
