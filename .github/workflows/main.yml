@@ -1,4 +1,4 @@
-name: Django-app workflow
+name: tracker-module-app workflow
 
 on: [push]
 
