@@ -1,5 +1,7 @@
 # Модуль фитнес-трекера
 
+[![Django-app workflow](https://github.com/alex-zharinov/hw_python_oop/actions/workflows/main.yml/badge.svg)](https://github.com/alex-zharinov/hw_python_oop/actions/workflows/main.yml)
+
 ## Программный модуль
 
 > Модуль фитнес-трекера определяет вид тренировки, рассчитывает её результат и выводит информационное сообщение о результате.
