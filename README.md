@@ -1,6 +1,6 @@
 # Модуль фитнес-трекера
 
-[![Django-app workflow](https://github.com/alex-zharinov/hw_python_oop/actions/workflows/main.yml/badge.svg)](https://github.com/alex-zharinov/hw_python_oop/actions/workflows/main.yml)
+[![tracker-module-app workflow](https://github.com/alex-zharinov/hw_python_oop/actions/workflows/main.yml/badge.svg)](https://github.com/alex-zharinov/hw_python_oop/actions/workflows/main.yml)
 
 ## Программный модуль
 
