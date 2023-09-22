@@ -16,7 +16,7 @@
 git clone https://github.com/alex-zharinov/ssp_module.git
 ```
 ```
-cd hw_python_oop
+cd ssp_module
 ```
 Cоздать и активировать виртуальное окружение:
 ```
