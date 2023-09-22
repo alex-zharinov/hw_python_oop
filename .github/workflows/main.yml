@@ -1,4 +1,4 @@
-name: tracker-module-app workflow
+name: ssp_module workflow
 
 on: [push]
 
